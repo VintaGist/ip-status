@@ -1,0 +1,8 @@
+{
+  "name": "IP Status",
+  "description": "Show external IP on GNOME top bar",
+  "uuid": "ip-status@vintagist.github.com",
+  "shell-version": [
+    "46"
+  ]
+}
