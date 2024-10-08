@@ -1,5 +1,4 @@
 import St from 'gi://St';
-import Clutter from 'gi://Clutter';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 import GLib from 'gi://GLib';
@@ -14,7 +13,7 @@ export default class IpAddressExtension extends Extension {
         this.label = new St.Label({ text: 'Loading...' });
     }
 
-    _byteArrayToString(bytes){
+    _byteArrayToString(bytes) {
         let decoder = null;
         if (global.TextDecoder) {
             // available in gjs >= 1.70 (GNOME Shell >= 42)
@@ -32,7 +31,7 @@ export default class IpAddressExtension extends Extension {
             let [ok, out, err, exit] = GLib.spawn_command_line_sync("curl -s ifconfig.me");
             if (ok && out) {
                 const ip = this._byteArrayToString(out)
-                log( ip );
+                log(ip);
                 return ip.trim();
             }
             return "Ip not found";

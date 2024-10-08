@@ -2,7 +2,7 @@
 
 ## Description
 
-The **IP Status** extension for GNOME Shell displays your external IP address on the top bar. This extension periodically updates the IP address and allows you to manually refresh it by clicking on the displayed IP.
+The **IP Status** extension for GNOME Shell displays your external IP address on the top bar. This extension allows you to manually refresh it by clicking on the displayed IP.
 
 ## Features
 
